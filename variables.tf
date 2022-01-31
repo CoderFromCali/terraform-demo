@@ -23,3 +23,8 @@ variable "ami_id"{
 variable "num_web_servers"{
   description = "Number of web servers to deploy"
 }
+
+variable "instance_type" {
+  description = "AWS Instance Type to use"
+  default = "t2.micro"
+}
