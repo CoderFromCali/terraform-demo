@@ -100,7 +100,7 @@ resource "aws_instance" "web-servers" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "web-${count.index}"
+    Name = "web-${count.index}",
     Department = var.department
   }
 }
