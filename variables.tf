@@ -28,3 +28,7 @@ variable "instance_type" {
   description = "AWS Instance Type to use"
   default = "t2.micro"
 }
+
+variable "department" {
+  description = "Instance tag for the department."
+}
