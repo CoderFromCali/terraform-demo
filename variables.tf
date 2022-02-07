@@ -16,10 +16,6 @@ variable "region"{
   description = "The region Terraform deploys your instance"
 }
 
-variable "ami_id"{
-  description = "The ID of the AMI created by Packer"
-}
-
 variable "num_web_servers"{
   description = "Number of web servers to deploy"
 }
