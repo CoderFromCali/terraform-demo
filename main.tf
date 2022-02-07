@@ -101,8 +101,7 @@ resource "aws_instance" "web-servers" {
 
   tags = {
     Name = "web-${count.index}",
-    Department = var.department,
-    BillingCode = var.billing_code
+    Department = var.department
   }
 }
 
