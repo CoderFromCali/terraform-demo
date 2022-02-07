@@ -1,3 +1,3 @@
-# Terraform Demo
+# Terraform Cloud Demo
 
-Demo script to show terraform functionality.
+Demo script to show Terraform Cloud functionality.
