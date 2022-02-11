@@ -32,3 +32,7 @@ variable "instance_type" {
 variable "department" {
   description = "Instance tag for the department."
 }
+
+variable "billing_code" {
+  description = "Billing Codes for accounting"
+}
