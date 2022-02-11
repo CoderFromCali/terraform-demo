@@ -20,7 +20,7 @@ variable "num_web_servers"{
   description = "Number of web servers to deploy"
 }
 
-variable "availibility_zone" {
+variable "availability_zone" {
   description = "AWS availibility zone to use"
   default = "us-west-2a"
 }
