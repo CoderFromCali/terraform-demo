@@ -17,8 +17,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
-    Department = var.department,
-    Billing_Code = var.billing_code
+    Department = var.department
   }
 }
 
@@ -32,8 +31,7 @@ resource "aws_subnet" "subnet_public" {
   availability_zone = var.availability_zone
   tags = {
     Name = "public-subnet",
-    Department = var.department,
-    Billing_Code = var.billing_code
+    Department = var.department
   }
 }
 
@@ -41,8 +39,7 @@ resource "aws_route_table" "rtb_public" {
   vpc_id = aws_vpc.vpc.id
   tags = {
     Name = "rtb-public",
-    Department = var.department,
-    Billing_Code = var.billing_code
+    Department = var.department
   }
 
   route {
@@ -61,8 +58,7 @@ resource "aws_security_group" "sg_22_80" {
   vpc_id = aws_vpc.vpc.id
   tags = {
     Name = "public security-group",
-    Department = var.department,
-    Billing_Code = var.billing_code
+    Department = var.department
   }
 
   # SSH access from the VPC
@@ -121,8 +117,7 @@ resource "aws_instance" "web-servers" {
 
   tags = {
     Name = "web-${count.index}",
-    Department = var.department,
-    Billing_Code = var.billing_code
+    Department = var.department
   }
 }
 
